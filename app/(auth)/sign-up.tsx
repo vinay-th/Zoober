@@ -5,6 +5,7 @@ import InputField from '@/components/InputField';
 import { useState } from 'react';
 import { Link } from 'expo-router';
 
+import OAuth from '@/components/OAuth';
 import CustomButton from '@/components/CustomButton';
 
 const SignUp = () => {
@@ -71,6 +72,7 @@ const SignUp = () => {
             className="mt-6"
           ></CustomButton>
           {/* OAuth */}
+          <OAuth />
           <Link
             href="/sign-in"
             className="text-md text-center text-general-200 mt-10"
