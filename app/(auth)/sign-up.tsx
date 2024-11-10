@@ -71,8 +71,11 @@ const SignUp = () => {
             className="mt-6"
           ></CustomButton>
           {/* OAuth */}
-          <Link href="/sign-in" className="text-lg text-general-200 mt-10">
-            <Text>Already have an account?</Text>
+          <Link
+            href="/sign-in"
+            className="text-md text-center text-general-200 mt-10"
+          >
+            <Text>Already have an account? </Text>
             <Text className="text-primary-500">Log in</Text>
           </Link>
         </View>
