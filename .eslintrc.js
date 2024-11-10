@@ -3,6 +3,7 @@ module.exports = {
   plugins: ['prettier', 'import'],
   rules: {
     'prettier/prettier': 'error',
+    '@typescript-eslint/no-unsafe-argument': 'off',
     'import/order': [
       'error',
       {
@@ -23,7 +24,6 @@ module.exports = {
         },
       },
     ],
-    // Allow `className` in JSX for NativeWind
     'react/no-unknown-property': [
       'error',
       {
@@ -31,4 +31,12 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/no-unsafe-argument': 'off',
+      },
+    },
+  ],
 };
