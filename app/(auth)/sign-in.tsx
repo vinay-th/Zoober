@@ -56,7 +56,7 @@ const SignIn = () => {
           <CustomButton
             title="Sign In"
             onPress={onSignInPress}
-            className="mt-6"
+            className="mt-6 font-InterSerif"
           ></CustomButton>
           {/* OAuth */}
           <OAuth />
