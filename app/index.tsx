@@ -8,7 +8,7 @@ const Home = () => {
     return <Redirect href="/(root)/(tabs)/home" />;
   }
   // @ts-ignore
-  return <Redirect href="/(auth)/welcome" />;
+  return <Redirect href="/(auth)/sign-in" />;
 };
 
 export default Home;
