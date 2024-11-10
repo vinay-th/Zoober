@@ -3,6 +3,7 @@ import { View, Text, Image } from 'react-native';
 import { ScrollView } from 'react-native';
 import InputField from '@/components/InputField';
 import { useState } from 'react';
+import { Link } from 'expo-router';
 
 import CustomButton from '@/components/CustomButton';
 
@@ -69,7 +70,13 @@ const SignUp = () => {
             onPress={onSignUpPress}
             className="mt-6"
           ></CustomButton>
+          {/* OAuth */}
+          <Link href="/sign-in" className="text-lg text-general-200 mt-10">
+            <Text>Already have an account?</Text>
+            <Text className="text-primary-500">Log in</Text>
+          </Link>
         </View>
+        {/* Verification model */}
       </View>
     </ScrollView>
   );
