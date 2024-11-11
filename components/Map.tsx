@@ -3,7 +3,7 @@ import { Text, View } from 'react-native';
 const Map = () => {
   return (
     <View>
-      <Text>Map</Text>
+      <Text>{/* THis is the google map that will occur in main app */}</Text>
     </View>
   );
 };
