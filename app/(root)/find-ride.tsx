@@ -1,10 +1,11 @@
-import { useLocationStore } from '@/store';
-import { Text, View } from 'react-native';
-import RideLayout from '@/components/RideLayout';
-import GoogleTextInput from '@/components/GoogleTextInput';
-import { icons } from '@/constants';
-import CustomButton from '@/components/CustomButton';
 import { router } from 'expo-router';
+import { Text, View } from 'react-native';
+
+import CustomButton from '@/components/CustomButton';
+import GoogleTextInput from '@/components/GoogleTextInput';
+import RideLayout from '@/components/RideLayout';
+import { icons } from '@/constants';
+import { useLocationStore } from '@/store';
 
 const FindRide = () => {
   const {
@@ -13,13 +14,15 @@ const FindRide = () => {
     setDestinationLocation,
     setUserLocation,
   } = useLocationStore();
+
   return (
-    <RideLayout title="Ride" snapPoints={['40%', '85%']}>
+    <RideLayout title="Ride">
       <View className="my-3">
         <Text className="text-lg font-JakartaSemiBold mb-3">From</Text>
+
         <GoogleTextInput
-          icon={icons.search}
-          initialLocation={userAddress}
+          icon={icons.target}
+          initialLocation={userAddress!}
           containerStyle="bg-neutral-100"
           textInputBackgroundColor="#f5f5f5"
           handlePress={(location) => setUserLocation(location)}
@@ -28,17 +31,19 @@ const FindRide = () => {
 
       <View className="my-3">
         <Text className="text-lg font-JakartaSemiBold mb-3">To</Text>
+
         <GoogleTextInput
           icon={icons.map}
-          initialLocation={destinationAddress}
+          initialLocation={destinationAddress!}
           containerStyle="bg-neutral-100"
           textInputBackgroundColor="transparent"
           handlePress={(location) => setDestinationLocation(location)}
         />
       </View>
+
       <CustomButton
-        title="Find Ride"
-        onPress={() => router.push('/(root)/confirm-ride')}
+        title="Find Now"
+        onPress={() => router.push(`/(root)/confirm-ride`)}
         className="mt-5"
       />
     </RideLayout>
